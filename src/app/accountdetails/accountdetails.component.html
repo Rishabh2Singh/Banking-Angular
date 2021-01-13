@@ -1,0 +1,27 @@
+<h1> Account Details </h1>
+
+<div *ngIf="accDet">
+    <form (ngSubmit)="update()">
+        Name:  <label>{{accDet.name}}</label><br/>
+        DateOfBirth : <label>{{accDet.dob}}</label><br/>
+        Aadhar Number :<label>{{accDet.aadharNumber}}</label><br/>
+        Modile Number :<input type="telephone" name="mobile" [(ngModel)]="accDet.mobile"/><br/>
+        <h5>Residential Address</h5>
+        Address Line :<input type="text" name="addr1" [(ngModel)]="accDet.add1.address"/><br/>
+        LandMark :<input type="text" name="landamrk1" [(ngModel)]="accDet.add1.landmark" /><br/>
+        City :<input type="text" name="city1" [(ngModel)]="accDet.add1.city" /><br/>
+        State :<input type="text" name="state1" [(ngModel)]="accDet.add1.state" /><br/>
+        Pincode :<input type="text" name="pincode1" [(ngModel)]="accDet.add1.pincode" /><br/>
+        <h5>Permanent Address</h5>
+        Address Line :<input type="text" name="addr2" [(ngModel)]="accDet.add2.address"/><br/>
+        LandMark :<input type="text" name="landamrk2" [(ngModel)]="accDet.add2.landmark" /><br/>
+        City :<input type="text" name="city1" [(ngModel)]="accDet.add2.city" /><br/>
+        State :<input type="text" name="state1" [(ngModel)]="accDet.add2.state" /><br/>
+        Pincode :<input type="text" name="pincode1" [(ngModel)]="accDet.add2.pincode" /><br/>
+        <h5>Occupation</h5>
+        Type:<input type="text" name="type" [(ngModel)]="accDet.occupation.type"/><br/>
+        Income_Source:<input type="text" name="source" [(ngModel)]="accDet.occupation.income_source"/><br/>
+        Annual_Income:<input type="number" name="income" [(ngModel)]="accDet.occupation.annual_income "/><br/>
+        <button type="submit">Update</button>
+    </form> 
+</div>

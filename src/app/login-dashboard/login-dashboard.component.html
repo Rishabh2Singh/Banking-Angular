@@ -1,0 +1,13 @@
+
+<div class="main">
+    <div class="Col1">
+        <div class="links"><a [routerLink]="'/account-details'" >Account Details</a></div>
+        <div class="links"><a [routerLink]="'/account-summary'" >Account Summary</a></div>
+        <div class="links"><a href="#contact" >Funds Transfer</a></div>
+        <div class="links"><a [routerLink]="'/account-statement'">Account Statement</a></div>
+    </div>
+    <div class="Col2">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

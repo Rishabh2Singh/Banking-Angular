@@ -1,0 +1,30 @@
+<div class="main">
+    <div class="col1">
+
+    </div>
+<div class="Col2">
+    <form (ngSubmit)="accStatement()">
+        Statement from :<input type="date" name="fromDate" [(ngModel)]=accountStatementCredentials.fromDate > 
+            to:<input type="date" name="toDate" [(ngModel)]=accountStatementCredentials.toDate> <br>
+            <button type="submit">Submit</button>
+    </form>   
+</div>
+<table class="table table-trapped" align="center">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Account Number</th>
+            <th>Amount</th>
+            <th>type</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let stm of stmt.resDto">
+               <td>  {{stm.name}} </td>
+               <td>  {{stm.accountNo}} </td>
+               <td>  {{stm.amount}} </td>
+               <td>  {{stm.type}}</td>
+            </tr>
+        </tbody>
+</table>
+</div>
