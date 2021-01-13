@@ -30,12 +30,12 @@ export class AccountdetailsComponent implements OnInit {
   }
 }
 export class Address{
-  id:number;
+   id:number;
    address:string;
 	 landmark:string;
    city:string;
 	 state:string;
-	  pincode:number;
+	 pincode:number;
 }
 export class Occupation{
   id:number;

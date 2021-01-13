@@ -1,10 +1,11 @@
 
 <div class="main">
     <div class="Col1">
-        <div class="links"><a [routerLink]="'/account-details'" >Account Details</a></div>
-        <div class="links"><a [routerLink]="'/account-summary'" >Account Summary</a></div>
-        <div class="links"><a href="#contact" >Funds Transfer</a></div>
-        <div class="links"><a [routerLink]="'/account-statement'">Account Statement</a></div>
+        <a routerLink='account-details' >Account Details</a><br>
+        <a routerLink='account-summary' >Account Summary</a><br>
+        <a routerLink='fundTransfer' >Funds Transfer</a><br>
+        <a routerLink='account-statement'>Account Statement</a><br>
+        <button style="padding: 10px;" onclick="goAccSumm()">Account Statement</button>
     </div>
     <div class="Col2">
         <router-outlet></router-outlet>

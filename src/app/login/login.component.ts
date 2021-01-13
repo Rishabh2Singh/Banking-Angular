@@ -23,7 +23,7 @@ export class LoginComponent {
       sessionStorage.setItem('accountNo',response.account.accountNo);
       sessionStorage.setItem('balance',response.account.balance);
       sessionStorage.setItem('custId',response.account.internetBanking.customerId);
-      this.router.navigate(['login/fundTransfer']);
+      this.router.navigate(['login/dashboard']);
       // this.router.navigate(['login/transfer']);
     })
   }
