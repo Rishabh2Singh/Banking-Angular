@@ -1,0 +1,23 @@
+.loginForm{
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    top: 30%;
+    left: 47%;
+    margin: -80px 0 0 -150px;
+    background-color: beige;
+    
+    text-align: center;
+}
+form{
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+}
+td{
+    margin:5px;
+    padding: 5px;
+}
+h1{
+    text-align: center;
+}

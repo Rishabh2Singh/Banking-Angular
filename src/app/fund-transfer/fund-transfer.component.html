@@ -1,0 +1,14 @@
+<h2>Welcome</h2>
+<h4>{{acno}}: Balance={{balance}}: Customer Id:{{custId}}</h4>
+<a class='logout' (click)='logoutUser()'>Logout</a>
+<br>
+<a routerLink='addPayee'>Add Payee</a>
+<form (ngSubmit)="chooseTransfer()">
+    Select mode of transfer
+    <select name="transfer" [(ngModel)]="type">
+        <option value="IMPS">IMPS</option>
+        <option value="NEFT">NEFT</option>
+        <option value="RTGS">RTGS</option>
+    </select>
+    <button type="submit">Go</button>
+</form>

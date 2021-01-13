@@ -1,0 +1,32 @@
+<form (ngSubmit)="insertPayee()">
+    <div><h3>Add Beneficiary</h3></div>
+    <table>
+        <tr>
+            <td>Beneficiary Name</td>
+            <td><input type="text" name="name" [(ngModel)]="payee.name"></td>
+        </tr>        
+        <tr>
+            <td>Beneficiary Account Number</td>
+            <td><input type="text" name="accNo" [(ngModel)]="payee.acno"></td>
+        </tr>
+        <tr>
+            <td>Re-Enter Account Number</td>
+            <td><input type="text" name="reAccNo" [(ngModel)]="reAcno"></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>
+                <select name="type" [(ngModel)]="payee.type">
+                    <option value="savings">Savings</option>
+                    <option value="current">Current</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>NickName</td>
+            <td><input type="text" name="nickname" [(ngModel)]=payee.nickname></td>
+        </tr>
+    </table>
+    <button type="submit">Add</button>
+</form>
+<h5 style="color:red;">{{message}}</h5>

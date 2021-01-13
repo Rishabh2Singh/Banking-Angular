@@ -1,0 +1,42 @@
+<div class="head">
+    <h3 id="transferName">{{type}} Transfer</h3>
+</div>
+<div id="transForm">
+<form #transPost="ngForm" (ngSubmit)="onSubmit(transPost.value)">
+    <table>
+        <tr>
+            <td>From Account:</td>
+            <td><input type="text" value={{fromAcc}} [disabled]=true>
+            </td>
+        </tr>
+        <tr>
+            <td>To Account:</td>
+            <td>
+                <select name="toAcc" [(ngModel)]="toAcc">
+                    <option *ngFor="let x of benef" value="{{x[0]}}">{{x[0]}}-{{x[1]}}</option>
+                </select>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Amount:</td>
+            <td><input type="number" name="amount" [(ngModel)]="amount"></td>
+        </tr>
+        <tr>
+            <td>Transaction Date:</td>
+            <td><input type="date" name="transDate" [(ngModel)]="transDate"></td>
+        </tr>
+        <tr>
+            <td>Remark:</td>
+            <td><input type="text" name="remark" [(ngModel)]="remark"></td>
+        </tr>
+        <tr>
+            <td><button>Save</button></td>
+            <td><button type="reset">Reset</button></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Continue</button></td>
+        </tr>
+    </table>
+</form>
+</div>
