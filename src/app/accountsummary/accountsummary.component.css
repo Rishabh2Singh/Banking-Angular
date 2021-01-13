@@ -1,0 +1,8 @@
+.Col2{
+    margin-top: 7% !important;
+    background: orange !important;
+}
+.main{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}

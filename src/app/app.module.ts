@@ -11,6 +11,16 @@ import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 import { TransferComponent } from './transfer/transfer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AddPayeeComponent } from './add-payee/add-payee.component';
+import { LoginDashboardComponent } from './login-dashboard/login-dashboard.component';
+import { AccountstatementComponent } from './accountstatement/accountstatement.component';
+import { AccountsummaryComponent } from './accountsummary/accountsummary.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
+
+
+const route : Routes = [
+
+];
 
 @NgModule({
   declarations: [
@@ -19,14 +29,22 @@ import { AddPayeeComponent } from './add-payee/add-payee.component';
     FundTransferComponent,
     TransferComponent,
     LogoutComponent,
-    AddPayeeComponent
+    AddPayeeComponent,
+    LoginDashboardComponent,
+    AccountstatementComponent,
+    AccountsummaryComponent,
+    AccountdetailsComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule.forRoot(route)
   ],
   providers: [],
   bootstrap: [AppComponent]
