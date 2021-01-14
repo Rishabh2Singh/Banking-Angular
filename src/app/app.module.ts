@@ -16,6 +16,7 @@ import { AccountstatementComponent } from './accountstatement/accountstatement.c
 import { AccountsummaryComponent } from './accountsummary/accountsummary.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
+import { TransactionReportComponent } from './transaction-report/transaction-report.component';
 
 
 const route : Routes = [
@@ -33,7 +34,8 @@ const route : Routes = [
     LoginDashboardComponent,
     AccountstatementComponent,
     AccountsummaryComponent,
-    AccountdetailsComponent
+    AccountdetailsComponent,
+    TransactionReportComponent
   ],
   imports: [
     FormsModule,

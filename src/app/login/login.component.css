@@ -1,6 +1,6 @@
 .loginForm{
     position: absolute;
-    width: 400px;
+    width: 350px;
     height: 250px;
     top: 30%;
     left: 47%;
@@ -20,4 +20,8 @@ td{
 }
 h1{
     text-align: center;
+}
+strong{
+    /* margin-bottom: 5px; */
+    color: red;
 }

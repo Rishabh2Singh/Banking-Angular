@@ -1,11 +1,10 @@
-
+<a class='logout' (click)='logoutUser()'>Logout</a>
 <div class="main">
     <div class="Col1">
         <a routerLink='account-details' >Account Details</a><br>
         <a routerLink='account-summary' >Account Summary</a><br>
         <a routerLink='fundTransfer' >Funds Transfer</a><br>
         <a routerLink='account-statement'>Account Statement</a><br>
-        <button style="padding: 10px;" onclick="goAccSumm()">Account Statement</button>
     </div>
     <div class="Col2">
         <router-outlet></router-outlet>

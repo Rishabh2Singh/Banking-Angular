@@ -19,15 +19,9 @@ export class FundTransferComponent implements OnInit {
   chooseTransfer(){
     
     sessionStorage.setItem('type',this.type);
-    this.router.navigate(['login/transfer']);
+    this.router.navigate(['transfer']);
   }
 
-  logoutUser(){
-    sessionStorage.clear();
-    // sessionStorage.removeItem(this.acno);
-    // sessionStorage.removeItem(this.balance);
-    this.router.navigate(['/login']);
-  }
 
   ngOnInit(): void {
     if(!this.acno){

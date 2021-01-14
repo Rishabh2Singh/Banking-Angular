@@ -1,8 +1,12 @@
-<h2>Welcome</h2>
-<h4>{{acno}}: Balance={{balance}}: Customer Id:{{custId}}</h4>
-<a class='logout' (click)='logoutUser()'>Logout</a>
+<div class="body">
+<div class="accDet">
+    <h4 class="sepH4">Account Number:{{acno}}</h4>
+    <h4 class="sepH4">Balance={{balance}}</h4> 
+    <h4>Customer Id:{{custId}}</h4>
+</div>
+
 <br>
-<a routerLink='addPayee'>Add Payee</a>
+<a routerLink='addPayee' class="addPayee">Add Payee</a>
 <form (ngSubmit)="chooseTransfer()">
     Select mode of transfer
     <select name="transfer" [(ngModel)]="type">
@@ -12,3 +16,4 @@
     </select>
     <button type="submit">Go</button>
 </form>
+</div>

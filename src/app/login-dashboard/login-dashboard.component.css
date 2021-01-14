@@ -32,3 +32,19 @@ a{
 .Col2{
     margin-top: 7% !important;
 }
+a{
+    color: rgb(250, 233, 233);
+    
+}
+a:hover{
+    background-color: rgb(182, 236, 182);
+    color: black;
+}
+.logout{
+    color:black;
+    background-color: rgb(241, 135, 135);
+}
+.logout:hover{
+    background-color: rgb(110, 8, 8);
+    color: white;
+}

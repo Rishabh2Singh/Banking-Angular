@@ -5,3 +5,23 @@
 .logout:hover{
     color: red;
 }
+.accDet{
+    padding: 5px;
+    background-color: rgb(189, 195, 199);
+}
+h4{
+    display: inline;
+}
+.sepH4{
+    padding-right: 350px;
+}
+.body{
+    background-color: rgb(242, 243, 244 );
+    height: 600px;
+}
+.addPayee{
+    text-decoration: none;
+    background-color: rgb(77, 86, 86);
+    padding: 4px;
+    color: white;
+}
