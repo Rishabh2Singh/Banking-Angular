@@ -1,0 +1,42 @@
+
+<h1 class="display-4" style="text-align: center;">
+    NetBanking Registration
+</h1>
+
+<div style="width: 80%; padding: 25px; padding-left: 320px;">
+<form (ngSubmit)="onSubmitNet()" #netForm="ngForm">
+    <div class="form-group" [class.has-error]="accountNo.touched && accountNo.invalid">
+        <input size="50" name="accountNo" [(ngModel)]="netbank.accountNo" type="number" class="form-control" placeholder="Account No" required #accountNo="ngModel">
+        <span class="help-block" *ngIf="accountNo.touched && accountNo.errors?.required" style="color: red;">Account No is required</span>
+    </div>
+
+    <div class="form-group" [class.has-error]="loginPass.touched && loginPass.invalid">
+        <input name="loginPass" [(ngModel)]="netbank.loginPass" type="password" class="form-control" placeholder="Login password" required #loginPass="ngModel">
+        <span class="help-block" *ngIf="loginPass.touched && loginPass.errors?.required" style="color: red;">Login password is required</span>
+    </div>
+
+    <div class="form-group" [class.has-error]="cpass.touched && cpass.invalid">
+        <input name="cpass" type="password" [(ngModel)]="netbank.cpass" appConfirmEqualValidator="loginPass" class="form-control" placeholder="Confirm password" required #cpass="ngModel">
+         <span class="help-block" *ngIf="cpass.touched && cpass.errors?.required" style="color: red;">Confirm password is required</span><br>
+        <span class="help-block" *ngIf="cpass.touched && cpass.errors?.notEqual" style="color: red;">Login password and Confirm password do not match</span> 
+    </div>
+
+    <div class="form-group" [class.has-error]="transPass.touched && transPass.invalid">
+        <input name="transPass" [(ngModel)]="netbank.transPass" type="password" class="form-control" placeholder="Transaction password" required #transPass="ngModel">
+        <span class="help-block" *ngIf="transPass.touched && transPass.errors?.required" style="color: red;">Transaction password is required</span>
+    </div>
+
+    <div class="form-group" [class.has-error]="tpass.touched && tpass.invalid" >
+        <input name="tpass" type="password" [(ngModel)]="netbank.tpass" appConfirmEqualValidator="transPass" class="form-control" placeholder="Confirm password" required #tpass="ngModel" >
+        <span class="help-block" *ngIf="tpass.touched && tpass.errors?.required" style="color: red;">Transaction password is required</span><br>
+        <span class="help-block" *ngIf="tpass.touched && tpass.errors?.notEqual" style="color: red;">Transaction password and Confirm Transaction password do not match</span> 
+    </div>
+
+    <div class="form-group" style="width: 20%;">
+        <!-- <a routerLink="/successnet" routerLinkActive="active"> -->
+            <button type="submit" [disabled]="!netForm.form.valid" class="btn btn-success btn-block btn-lg">Submit</button>
+    <!-- </a> -->
+    </div>
+
+</form>
+</div>

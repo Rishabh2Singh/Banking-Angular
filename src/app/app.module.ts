@@ -6,6 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NetbankComponent } from './netbank/netbank.component';
+import { PopupsuccessComponent } from './popupsuccess/popupsuccess.component';
 import { LoginComponent } from './login/login.component';
 import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 import { TransferComponent } from './transfer/transfer.component';
@@ -18,13 +23,25 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
 
 
-const route : Routes = [
 
-];
+import { RegisterService } from './service/register.service';
+import { NetbankService } from './service/netbank.service';
+import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
+
+
+
+
+import { from } from 'rxjs';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    RegisterComponent,
+    NavbarComponent,
+    NetbankComponent,
+    PopupsuccessComponent,
     LoginComponent,
     FundTransferComponent,
     TransferComponent,
@@ -33,7 +50,9 @@ const route : Routes = [
     LoginDashboardComponent,
     AccountstatementComponent,
     AccountsummaryComponent,
-    AccountdetailsComponent
+    AccountdetailsComponent,
+    ConfirmEqualValidatorDirective,
+    
   ],
   imports: [
     FormsModule,
@@ -44,9 +63,12 @@ const route : Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule.forRoot(route)
+    //RouterModule.forRoot(routes),
+    //RouterModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [RegisterService,NetbankService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
