@@ -11,17 +11,18 @@
 }
 h4{
     display: inline;
+    font-size: 16px;
 }
 .sepH4{
-    padding-right: 350px;
+    padding-right: 150px;
 }
 .body{
     background-color: rgb(242, 243, 244 );
-    height: 600px;
+    height: 300px;
 }
-.addPayee{
+/* .addPayee{
     text-decoration: none;
     background-color: rgb(77, 86, 86);
     padding: 4px;
     color: white;
-}
+} */

@@ -1,12 +1,13 @@
-<a class='logout' (click)='logoutUser()'>Logout</a>
-<div class="main">
-    <div class="Col1">
+<a class='logout btn btn-danger' (click)='logoutUser()'>Logout</a>
+
+<div class="row text-center">
+    <div class="col-3">
         <a routerLink='account-details' >Account Details</a><br>
         <a routerLink='account-summary' >Account Summary</a><br>
         <a routerLink='fundTransfer' >Funds Transfer</a><br>
         <a routerLink='account-statement'>Account Statement</a><br>
     </div>
-    <div class="Col2">
+    <div class="col-8">
         <router-outlet></router-outlet>
     </div>
 </div>

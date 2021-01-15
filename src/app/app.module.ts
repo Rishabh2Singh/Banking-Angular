@@ -6,6 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NetbankComponent } from './netbank/netbank.component';
+import { PopupsuccessComponent } from './popupsuccess/popupsuccess.component';
 import { LoginComponent } from './login/login.component';
 import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 import { TransferComponent } from './transfer/transfer.component';
@@ -19,13 +24,27 @@ import { AccountdetailsComponent } from './accountdetails/accountdetails.compone
 import { TransactionReportComponent } from './transaction-report/transaction-report.component';
 
 
-const route : Routes = [
 
-];
+import { RegisterService } from './service/register.service';
+import { NetbankService } from './service/netbank.service';
+import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
+
+
+
+
+import { from } from 'rxjs';
+import { ForgotUserComponent } from './forgot-user/forgot-user.component';
+import { ConfirmTransactionComponent } from './confirm-transaction/confirm-transaction.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    RegisterComponent,
+    NavbarComponent,
+    NetbankComponent,
+    PopupsuccessComponent,
     LoginComponent,
     FundTransferComponent,
     TransferComponent,
@@ -35,7 +54,11 @@ const route : Routes = [
     AccountstatementComponent,
     AccountsummaryComponent,
     AccountdetailsComponent,
-    TransactionReportComponent
+    TransactionReportComponent,
+    ConfirmEqualValidatorDirective,
+    ForgotUserComponent,
+    ConfirmTransactionComponent,
+    
   ],
   imports: [
     FormsModule,
@@ -46,9 +69,12 @@ const route : Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule.forRoot(route)
+    //RouterModule.forRoot(routes),
+    //RouterModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [RegisterService,NetbankService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

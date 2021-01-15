@@ -1,13 +1,9 @@
-.background{
-    background-color: rgb(247, 243, 239);
-    height: 360px;
-    padding: 120px;
-}
+
 .transForm{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(236, 231, 231);
+    /* background-color: rgb(236, 231, 231); */
     padding: 60px;
-    width: 300px;
+    width: 450px;
     color: black;
     margin: auto;
 }
@@ -29,5 +25,5 @@ td{
     text-align: center;
 }
 td:hover{
-    color: rgb(14, 78, 151);
+    color: rgb(70, 143, 226);
 }

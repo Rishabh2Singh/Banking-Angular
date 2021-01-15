@@ -1,0 +1,124 @@
+
+<h1 class="display-4" style="text-align: center;">
+    Registration Form
+</h1>
+
+<div style="width: 80%; padding: 25px; padding-left: 320px;">
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <h4 class="display-5"><label>Personal Information</label></h4> 
+    <div class="form-group" [class.has-error]="name.touched && name.invalid">
+        <input name="name" [(ngModel)]="register.name" type="text" class="form-control" placeholder="Name" required #name="ngModel">
+        <span class="help-block" *ngIf="name.touched && name.errors?.required" style="color: red;">Name is required</span>
+    </div> 
+    
+    <!-- <div class="form-group">
+        <input name="lastname" type="text" class="form-control" placeholder="Last Name">
+    </div> -->
+
+    <div class="form-group" [class.has-error]="fatherName.touched && fatherName.invalid">
+        <input name="fatherName" [(ngModel)]="register.fatherName" type="text" class="form-control" placeholder="Father's Name" required #fatherName="ngModel">
+        <span class="help-block" *ngIf="fatherName.touched && fatherName.errors?.required" style="color: red;">Father name is required</span>
+    </div>
+
+    <div class="form-group">
+        <input name="dob" [(ngModel)]="register.dob" type="date" class="form-control" placeholder="Date Of Birth" required #dob="ngModel">
+    </div>
+
+    <div class="form-group" [class.has-error]="mobile.touched && mobile.invalid">
+        <input name="mobile" [(ngModel)]="register.mobile" type="number" class="form-control" placeholder="Mobile" required #mobile="ngModel">
+        <span class="help-block" *ngIf="mobile.touched && mobile.errors?.required" style="color: red;">Mobile is required</span>
+    </div>
+
+    <div class="form-group" [class.has-error]="email.touched && email.invalid">
+        <input name="email" [(ngModel)]="register.email" type="email" class="form-control" placeholder="Email" required #email="ngModel">
+        <span class="help-block" *ngIf="email.touched && email.errors?.required" style="color: red;">Email is required</span>
+    </div>
+
+    <div class="form-group" [class.has-error]="adharCard.touched && adharCard.invalid">
+        <input type="number" [(ngModel)]="register.adharCard" name="adharCard" class="form-control" placeholder="Adhar" required #adharCard="ngModel">
+        <span class="help-block" *ngIf="adharCard.touched && adharCard.errors?.required" style="color: red;">Adhar Number is required</span>
+    </div>
+
+
+
+
+   <h4 class="display-5"><label>Address</label></h4> 
+    <div class="form-group" [class.has-error]="address.touched && address.invalid"> 
+        <input name="address" [(ngModel)]="register.address" type="text" class="form-control" placeholder="Address" required #address="ngModel">
+        <span class="help-block" *ngIf="address.touched && address.errors?.required" style="color: red;">Address is required</span>
+    </div>
+    <div class="form-group" [class.has-error]="landmark.touched && landmark.invalid"> 
+        <input name="landmark" [(ngModel)]="register.landmark" type="text" class="form-control" placeholder="Landmark" required #landmark="ngModel">
+        <span class="help-block" *ngIf="landmark.touched && landmark.errors?.required" style="color: red;">Landmark is required</span>
+    </div>
+    <div class="form-group" [class.has-error]="city.touched && city.invalid"> 
+        <input name="city" [(ngModel)]="register.city" type="text" class="form-control" placeholder="City" required #city="ngModel">
+        <span class="help-block" *ngIf="city.touched && city.errors?.required" style="color: red;">City is required</span>
+    </div>
+    <div class="form-group" [class.has-error]="state.touched && state.invalid"> 
+        <input name="state" [(ngModel)]="register.state" type="text" class="form-control" placeholder="State" required #state="ngModel">
+        <span class="help-block" *ngIf="state.touched && state.errors?.required" style="color: red;">State is required</span>
+    </div>
+    <div class="form-group" [class.has-error]="pincode.touched && pincode.invalid">  
+        <input name= "pincode" [(ngModel)]="register.pincode" type="number" class="form-control" placeholder="pincode" required #pincode="ngModel"> 
+        <span class="help-block" *ngIf="pincode.touched && pincode.errors?.required" style="color: red;">Pincode is required</span>
+    </div>
+
+   
+
+    <h4 class="display-5"><label>Occupation Information</label></h4> 
+    <div class="form-group" [class.has-error]="type.touched && type.invalid">
+        <input name="type" [(ngModel)]="register.type" type="text" class="form-control" placeholder="Occupation Type" required #type="ngModel">
+        <span class="help-block" *ngIf="type.touched && type.errors?.required" style="color: red;">Occupation is required</span>
+    </div>
+
+    <div class="form-group" [class.has-error]="income_source.touched && income_source.invalid">
+        <input name="income_source" [(ngModel)]="register.income_source" type="text" class="form-control" placeholder="Income Source" required #income_source="ngModel">
+        <span class="help-block" *ngIf="income_source.touched && income_source.errors?.required" style="color: red;">Income Source is required</span>
+    </div>
+
+    <div class="form-group" [class.has-error]="annual_income.touched && annual_income.invalid">
+        <input name="annual_income" [(ngModel)]="register.annual_income" type="number" class="form-control" placeholder="Annual Income" required #annual_income="ngModel">
+        <span class="help-block" *ngIf="annual_income.touched && annual_income.errors?.required" style="color: red;">Annual Income is required</span>
+    </div>
+
+
+
+    <h4 class="display-5"><label>Account Information</label></h4> 
+    <div class="form-group">
+        <input name="amount" [(ngModel)]="register.amount" type="number" class="form-control" placeholder="Amount for Account Opening" required #account="ngModel">
+    </div>
+
+    <div class="form-group" [class.has-error]="accType.touched && accType.invalid">
+        <input name="accType" [(ngModel)]="register.accType" type="text" class="form-control" placeholder="Account Type(Savings/Salary/Business)" required #accType="ngModel">
+        <span class="help-block" *ngIf="accType.touched && accType.errors?.required" style="color: red;">Account Type is required</span>
+    </div>
+    
+    <!-- <div class="form-group">
+        Debit: <input type="checkbox" name="debitCard" [(ngModel)]="register.debitCard" value="1" #debitCard="ngModel">
+        Credit: <input type="checkbox" name="creditCard" [(ngModel)]="register.creditCard" value="1" #creditCard="ngModel">
+    </div> -->
+
+    <div>
+        Debit:
+        <select name="debitCard" [(ngModel)]="register.debitCard" #debitCard="ngModel" >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        Credit:
+        <select name="creditCard" [(ngModel)]="register.creditCard" #creditCard="ngModel">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+</div>
+
+
+    <div class="form-group" style="width: 20%;">
+        <!-- <a routerLink="/successreg" routerLinkActive="active"> -->
+        <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-success btn-block btn-lg">Submit</button>
+    <!-- </a> -->
+    </div>
+
+</form>
+
+</div>

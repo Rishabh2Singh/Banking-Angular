@@ -22,11 +22,9 @@ export class TransferComponent implements OnInit {
   amount:number;
   transDate:Date;
   toAcc:number;
+  
 
-  balance:number;
-  bankBal:any;
-
-  constructor(private payeeService:PayeeService, private router:Router) {
+  constructor(private payeeService:PayeeService, private router:Router,private loginService:LoginService) {
     // this.benef=new Beneficiary();
       this.transfer=new Transaction();
   }
@@ -38,50 +36,33 @@ export class TransferComponent implements OnInit {
 
     this.payeeService.gettingBenef(this.custId).subscribe(response=>{
       this.benef=response;
-      // alert(JSON.stringify(this.benef));
-      // console.log(this.benef);
     });
+
     this.payeeService.getMyAcc(this.custId).subscribe(response=>{
-      // alert(response);
       this.fromAcc=response;
       sessionStorage.setItem('fromAcc',this.fromAcc);
     })
   }
   transId:any;
-
+  otp:any;
   onSubmit(data: any){
     // alert(data.toAcc);
     console.log(data);
-    this.transfer.toAc=data.toAcc;
-    this.transfer.type=this.type;
-    this.transfer.amt=data.amount;
-    // this.transfer.dt=data.transDate;'
-    this.transfer.remark=data.remark;
-    this.transfer.fromAc=this.fromAcc;
-    this.payeeService.addTransaction(this.transfer).subscribe(response=>{
-          // alert(JSON.stringify(response));
-          this.transId=response;
-          if(this.transId){
-            sessionStorage.setItem('toAcc',data.toAcc);
-            sessionStorage.setItem('amount',data.amount);
-            sessionStorage.setItem('remark',data.remark);
-            this.balance=parseInt(sessionStorage.getItem('balance'));
-            this.balance=this.balance-data.amount;
-            this.bankBal=this.balance;
-            sessionStorage.setItem('balance',this.bankBal);
-            this.router.navigate(['login/transactionDetail']);
-          }
-        });
+   
+
+    //putting all input details in session
+    sessionStorage.setItem('toAcc',data.toAcc);
+    sessionStorage.setItem('amount',data.amount);
+    sessionStorage.setItem('remark',data.remark);
+    
+    this.loginService.getOtp(this.fromAcc).subscribe(response=>{
+      this.otp=response;
+      alert(this.otp);
+      sessionStorage.setItem('otp',this.otp);
+      this.router.navigate(['transfer/confirmTransaction']);
+    });
+
+    
   }
 
 }
-
-
-// export class Payee{
-//   id:number
-//   name:String
-//   nickname:String
-//   type:String
-//   account:number
-//   customer:number
-// }

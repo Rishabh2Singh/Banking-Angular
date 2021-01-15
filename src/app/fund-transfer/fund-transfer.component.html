@@ -1,12 +1,13 @@
 <div class="body">
 <div class="accDet">
-    <h4 class="sepH4">Account Number:{{acno}}</h4>
-    <h4 class="sepH4">Balance={{balance}}</h4> 
-    <h4>Customer Id:{{custId}}</h4>
+    <h4 class="sepH4">Account Number : <mark> {{acno}}</mark></h4>
+    <h4 class="sepH4">Balance : {{balance}}</h4> 
+    <h4>Customer Id : {{custId}}</h4>
 </div>
-
+<br><br>
 <br>
-<a routerLink='addPayee' class="addPayee">Add Payee</a>
+<a class="btn btn-outline-info" routerLink='addPayee'>Add Payee</a>
+<br><br><br>
 <form (ngSubmit)="chooseTransfer()">
     Select mode of transfer
     <select name="transfer" [(ngModel)]="type">
@@ -14,6 +15,6 @@
         <option value="NEFT">NEFT</option>
         <option value="RTGS">RTGS</option>
     </select>
-    <button type="submit">Go</button>
+    <button class="btn btn-info" type="submit">Go</button>
 </form>
 </div>
