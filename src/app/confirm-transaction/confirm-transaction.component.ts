@@ -58,11 +58,15 @@ export class ConfirmTransactionComponent implements OnInit {
     this.payeeService.addTransaction(this.transfer).subscribe(response=>{
       // alert(JSON.stringify(response));
       this.transId=response;
-      
-      if(this.transId){
+      if(parseInt(this.transId)==0){
+        alert("Insufficient amount to make this transaction...");
+        this.router.navigate(['transfer']);
+      }
+      else if(this.transId){
         sessionStorage.setItem('transId',this.transId);
         this.router.navigate(['login/transactionDetail']);
       }
+
       sessionStorage.removeItem('otp');
     });
     }

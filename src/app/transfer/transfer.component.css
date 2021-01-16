@@ -1,20 +1,11 @@
-table{
-    border: 1px;
-    background-color:antiquewhite;
-    text-align: center;
-    padding: 10px;
-}
 #transForm{
-    padding-top: 10px;
-    position: relative;
-    left: 500px;
+    margin-left: 160px;
 }
-tr{
-    margin: 10px;
+.blink_me{
+    animation: blinker 0.7s linear infinite;
 }
-td{
-    padding: 10px;
-}
-#transferName{
-    text-align: center;
+@keyframes blinker{
+    50%{
+        opacity: 0;
+    }
 }
