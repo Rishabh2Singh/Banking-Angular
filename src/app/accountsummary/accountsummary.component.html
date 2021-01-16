@@ -1,1 +1,45 @@
-<p>accountsummary works!</p>
+<div *ngIf=summary>
+ Name :<label>{{summary.name}}</label> <br>
+ Email :<label>{{summary.email}}</label> <br>
+ Aadhar Number:<label>{{summary.adharCard}}</label> <br>
+ Account NUmber:<label>{{summary.accountNo}}</label> <br>
+ Type:<label>{{summary.type}}</label> <br>
+ Balance:<label>{{summary.balance}}</label> <br>
+ <h2>Recent Transactions</h2>
+ <table class="table table-trapped" align="center">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Account Involved</th>
+            <th>Amount</th>
+            <th>type</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let stm of summary.activity">
+               <td>  {{stm.date}} </td>
+               <td>   {{stm.accountInv}} </td>
+               <td>  {{stm.amount}} </td>
+               <td>  {{stm.type}}</td>
+            </tr>
+        </tbody>
+</table>
+
+
+</div>
+
+<!-- {accountNo: 1001345101, name: "priya", email: "priya@gmail.com", adharCard: 600498772341, type: "savings", …}
+accountNo: 1001345101
+activity: Array(4)
+0: {id: 508, account: {…}, type: "IMPS Transfer", accountInv: 0, date: "2021-01-14", …}
+1: {id: 509, account: {…}, type: "IMPS Recieve", accountInv: 0, date: "2021-01-14", …}
+2: {id: 501, account: {…}, type: "IMPS Transfer", accountInv: 1001345102, date: "2021-01-08", …}
+3: {id: 504, account: {…}, type: "NEFT Receive", accountInv: 1001345105, date: "2021-01-08", …}
+length: 4
+__proto__: Array(0)
+adharCard: 600498772341
+balance: 12000
+email: "priya@gmail.com"
+name: "priya"
+type: "savings"
+__proto__: Object -->
