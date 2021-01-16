@@ -1,10 +1,23 @@
 <div *ngIf=summary>
- Name :<label>{{summary.name}}</label> <br>
- Email :<label>{{summary.email}}</label> <br>
+<div>
+ <label class="col-sm-2 text-muted text-left">Name</label> 
+ <label class="col-sm-2 text-left">{{summary.name}}</label> <br>
+ <label class="col-sm-2 text-muted text-left">Email</label> 
+ <label class="col-sm-2 text-left">{{summary.email}}</label> <br>
+ <label class="col-sm-2 text-left text-muted">Account No</label> 
+ <label class="col-sm-2 text-left">{{summary.accountNo}}</label> <br>
+ <label class="col-sm-2 text-left text-muted">Account Type</label> 
+ <label class="col-sm-2 text-left">{{summary.type}}</label> <br>
+ <label class="col-sm-2 text-left text-muted">Balance Amount</label> 
+ <label class="col-sm-2 text-left">{{summary.balance}}</label> <br>
+ 
+
+ <!-- Email :<label>{{summary.email}}</label> <br>
  Aadhar Number:<label>{{summary.adharCard}}</label> <br>
  Account NUmber:<label>{{summary.accountNo}}</label> <br>
  Type:<label>{{summary.type}}</label> <br>
- Balance:<label>{{summary.balance}}</label> <br>
+ Balance:<label>{{summary.balance}}</label> <br> -->
+</div>
  <h2>Recent Transactions</h2>
  <table class="table table-trapped" align="center">
     <thead>
