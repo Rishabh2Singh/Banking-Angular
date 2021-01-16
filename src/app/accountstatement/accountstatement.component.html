@@ -4,11 +4,12 @@
     </div>
 <div class="Col2">
     <form (ngSubmit)="accStatement()">
-        Statement from :<input type="date" name="fromDate" [(ngModel)]=accountStatementCredentials.fromDate > 
+        Statement from :<input type="date" name="fromDate" [(ngModel)]=accountStatementCredentials.fromDate class="from-class"> 
             to:<input type="date" name="toDate" [(ngModel)]=accountStatementCredentials.toDate> <br>
-            <button type="submit">Submit</button>
+            <button type="submit" class="submit-class">Submit</button>
     </form>   
 </div>
+<h3 align="center"> {{stmt.message}}</h3>
 <table class="table table-trapped" align="center">
     <thead>
         <tr>

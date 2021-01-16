@@ -16,6 +16,7 @@ import { TransferComponent } from './transfer/transfer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ForgotUserComponent } from './forgot-user/forgot-user.component';
 import { ConfirmTransactionComponent } from './confirm-transaction/confirm-transaction.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,9 @@ const routes: Routes = [
   {path: 'successreg', component: PopupsuccessComponent},
   {path: 'successnet', component: PopupsuccessComponent},
   {path: 'navbar', component: NavbarComponent},
- 
+  {path: 'forgotpassword', component: ForgotpasswordComponent },
+  {path: 'login/forgotpassword', component: ForgotpasswordComponent },
+
 
   {path: 'login', component:LoginComponent},  
   // {path: 'login/dashboard/fundTransfer', component:FundTransferComponent},

@@ -35,6 +35,7 @@ import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator
 import { from } from 'rxjs';
 import { ForgotUserComponent } from './forgot-user/forgot-user.component';
 import { ConfirmTransactionComponent } from './confirm-transaction/confirm-transaction.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 
@@ -58,6 +59,7 @@ import { ConfirmTransactionComponent } from './confirm-transaction/confirm-trans
     ConfirmEqualValidatorDirective,
     ForgotUserComponent,
     ConfirmTransactionComponent,
+    ForgotpasswordComponent,
     
   ],
   imports: [
