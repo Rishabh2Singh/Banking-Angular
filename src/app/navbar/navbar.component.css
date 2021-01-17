@@ -1,0 +1,17 @@
+ 
+
+.logo .logo_pic{
+
+   margin-top: 1%;
+    margin-left: -50%;
+    text-shadow: 2px;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.logo .logo_text{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: -60%;
+
+}

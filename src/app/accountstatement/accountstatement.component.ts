@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountStatementServiceService } from '../account-statement-service.service';
-
+// import * as jsPDF from 'jspdf'
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+// import html2canvas from 'html2canvas'
 @Component({
   selector: 'app-accountstatement',
   templateUrl: './accountstatement.component.html',
@@ -10,18 +12,24 @@ import { AccountStatementServiceService } from '../account-statement-service.ser
 export class AccountstatementComponent implements OnInit {
 
   stmt:any;
+  public cusId1=parseInt(sessionStorage.getItem('custId'));
   accountStatementCredentials: AccountStatementCredentials = new AccountStatementCredentials();
- // accStat : AccountStatementDto[]=[];
   constructor(private accountStatementService:AccountStatementServiceService,private router:Router) { }
 
   ngOnInit(): void {
+    this.accountStatementService.fetchDefaultStatement(this.cusId1).subscribe(
+      (response:any)=>{
+        this.stmt=response;
+        console.log(this.stmt);
+      }
+    );
   }
 
   accStatement(){
     this.accountStatementService.fetchStatement(this.accountStatementCredentials).subscribe(
       (response:any)=>{
         this.stmt=response;
-  })
+  });
   } 
 }
 export class AccountStatementCredentials {
