@@ -13,15 +13,16 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { TransferComponent } from './transfer/transfer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'netbanking', component: NetbankComponent},
   {path: 'successreg', component: PopupsuccessComponent},
-  {path: 'successnet', component: PopupsuccessComponent},
   {path: 'navbar', component: NavbarComponent},
- 
+  {path: 'homepage', component: HomeComponent},
+
 
   {path: 'login', component:LoginComponent},  
   {path: 'login/dashboard/fundTransfer', component:FundTransferComponent},

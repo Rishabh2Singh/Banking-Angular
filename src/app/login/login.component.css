@@ -4,7 +4,7 @@
     height: 250px;
     top: 30%;
     left: 47%;
-    margin: -80px 0 0 -150px;
+    margin: -10px 0 0 -150px;
     background-color: beige;
     
     text-align: center;
@@ -19,5 +19,6 @@ td{
     padding: 5px;
 }
 h1{
+    font-family: Arial;
     text-align: center;
 }

@@ -11,11 +11,11 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
   login(login:Login):Observable<any>{
-    let url=("http://localhost:8086/login");
+    let url=("http://localhost:8080/login");
     return this.http.post(url,login);
   }
   check(message:string):Observable<any>{
-    let url=("http://localhost:8086/testing");
+    let url=("http://localhost:8080/testing");
     return this.http.post(url,message);
   }
   

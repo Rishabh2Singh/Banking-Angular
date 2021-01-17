@@ -32,6 +32,7 @@ import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator
 
 
 import { from } from 'rxjs';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -52,6 +53,7 @@ import { from } from 'rxjs';
     AccountsummaryComponent,
     AccountdetailsComponent,
     ConfirmEqualValidatorDirective,
+    HomeComponent,
     
   ],
   imports: [

@@ -14,6 +14,6 @@ export class NetbankService {
   }
 
   public save(netbank: Netbank) {
-    return this.http.post<Netbank>(this.netbankUrl, netbank);
+    return this.http.post<any>(this.netbankUrl, netbank);
   }
 }
