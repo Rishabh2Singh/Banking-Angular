@@ -1,6 +1,6 @@
 .payeeDetails{
     margin-left: 520px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 td{
     padding: 3px;
@@ -15,4 +15,14 @@ button{
 }
 h6{
     margin-top: 20px;
+}
+.description{
+    margin-left: 380px;
+}
+.describe{
+    padding: 0px;
+    margin: 0px;
+}
+hr{
+    width: 850px;
 }

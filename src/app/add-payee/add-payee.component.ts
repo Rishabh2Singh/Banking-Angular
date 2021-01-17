@@ -34,6 +34,7 @@ export class AddPayeeComponent implements OnInit {
           this.message="This account number as payee already exists in your list...";
         }
         else{
+          this.message="";
           this.messageSuccess="Payee added successfully...";
         }
       });

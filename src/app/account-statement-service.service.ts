@@ -40,4 +40,8 @@ export class AccountStatementServiceService {
     let url="http://localhost:8080/setNewPassword?custId="+cusId+"&pwd="+pwd;
     return this.http.get<any>(url);
   }
+  fetchDefaultStatement(cusId:number):Observable<any>{
+    let url="http://localhost:8080/defaultAccountStatement?custId="+cusId;
+    return this.http.get<any>(url);
+}
 }

@@ -20,12 +20,24 @@ export class NetbankComponent {
   }
  
   onSubmitNet() {
-    this.netbankService.save(this.netbank).subscribe(result => this.gotoSuccess());
+    this.netbankService.save(this.netbank).subscribe(result => {
+      if(result.status=="SUCCESS")
+      {
+        let message = result.message;
+        alert(message)
+        this.router.navigate(['/homepage']);
+      }
+      else
+      {
+        alert(result.message)
+      }
+    });
+    
   }
 
-  gotoSuccess() {
-    this.router.navigate(['/successnet']);
-  }
+  // gotoSuccess() {
+  //   this.router.navigate(['/successnet']);
+  // }
 
 
 }

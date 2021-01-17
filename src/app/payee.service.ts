@@ -32,4 +32,8 @@ export class PayeeService {
     // alert(JSON.stringify(transfer));
     return this.http.post(url,transfer);
   }
+  removePayee(acno:any,custId:any): Observable<any>{
+    let url=(`http://localhost:8080/removePayee?acno=${acno}&custId=${custId}`);
+    return this.http.get(url);
+  }
 }

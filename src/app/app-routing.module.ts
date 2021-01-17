@@ -14,17 +14,20 @@ import { LogoutComponent } from './logout/logout.component';
 import { TransactionReportComponent } from './transaction-report/transaction-report.component';
 import { TransferComponent } from './transfer/transfer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 import { ForgotUserComponent } from './forgot-user/forgot-user.component';
 import { ConfirmTransactionComponent } from './confirm-transaction/confirm-transaction.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { RemovePayeeComponent } from './remove-payee/remove-payee.component';
+import { ConfirmRemovePayeeComponent } from './confirm-remove-payee/confirm-remove-payee.component';
 
 
 const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'netbanking', component: NetbankComponent},
   {path: 'successreg', component: PopupsuccessComponent},
-  {path: 'successnet', component: PopupsuccessComponent},
   {path: 'navbar', component: NavbarComponent},
+  {path: 'homepage', component: HomeComponent},
   {path: 'forgotpassword', component: ForgotpasswordComponent },
   {path: 'login/forgotpassword', component: ForgotpasswordComponent },
 
@@ -34,6 +37,8 @@ const routes: Routes = [
   {path: 'transfer', component:TransferComponent},
   {path: 'logout', component:LogoutComponent},
   {path: 'login/dashboard/fundTransfer/addPayee', component:AddPayeeComponent},
+  {path: 'login/dashboard/fundTransfer/removePayee', component:RemovePayeeComponent},
+  {path: 'confirmRemovePayee', component: ConfirmRemovePayeeComponent},
   {path: 'login/dashboard', component:LoginDashboardComponent,
     children: [
       {path: 'fundTransfer', component: FundTransferComponent},

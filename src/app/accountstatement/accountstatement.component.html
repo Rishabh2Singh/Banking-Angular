@@ -2,30 +2,31 @@
     <div class="col1">
 
     </div>
-<div class="Col2">
-    <form (ngSubmit)="accStatement()">
-        Statement from :<input type="date" name="fromDate" [(ngModel)]=accountStatementCredentials.fromDate class="from-class"> 
+    <div class="Col2">
+        <form (ngSubmit)="accStatement()">
+            Statement from :<input type="date" name="fromDate" [(ngModel)]=accountStatementCredentials.fromDate
+                class="from-class">
             to:<input type="date" name="toDate" [(ngModel)]=accountStatementCredentials.toDate> <br>
             <button type="submit" class="submit-class">Submit</button>
-    </form>   
-</div>
-<h3 align="center"> {{stmt.message}}</h3>
-<table class="table table-trapped" align="center">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Account Number</th>
-            <th>Amount</th>
-            <th>type</th>
-        </tr>
-    </thead>
-        <tbody>
-            <tr *ngFor="let stm of stmt.resDto">
-               <td>  {{stm.name}} </td>
-               <td>  {{stm.accountNo}} </td>
-               <td>  {{stm.amount}} </td>
-               <td>  {{stm.type}}</td>
+        </form>
+    </div>
+    <h3 align="center"> {{stmt.message}}</h3>
+    <table class="table table-trapped" align="center">
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Name</th>
+                <th>Account Number</th>
+                <th>Amount</th>
+                <th>type</th>
             </tr>
-        </tbody>
-</table>
+            <tr *ngFor="let stm of stmt.resDto">
+                <td> {{stm.date}}</td>
+                <td> {{stm.time}}</td>
+                <td> {{stm.name}} </td>
+                <td> {{stm.accountNo}} </td>
+                <td> {{stm.amount}} </td>
+                <td> {{stm.type}}</td>
+            </tr>
+    </table>
 </div>
