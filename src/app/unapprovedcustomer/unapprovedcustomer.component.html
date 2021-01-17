@@ -1,9 +1,11 @@
-<p>unapprovedcustomer works!</p>
-
-<form (ngSubmit)="holderCheck()">
-   <button type="submit">view Customer</button>
+<a routerLink='../' class="btn btn-outline-secondary">Back</a>
+<form class="text-center" (ngSubmit)="holderCheck()">
+   <br>
+    <button class="btn btn-outline-info" type="submit">view Customer</button>
+   <br>
+   <br>
    <div>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Customer Name</th>
@@ -37,11 +39,11 @@
 
 </form>
 <br>
-<form (ngSubmit)="Approve()">
-    <button type="submit">Approvee</button>
+<form class="text-center" (ngSubmit)="Approve()">
+    <button class="btn btn-outline-success" type="submit">Approve</button>
 </form> 
-<form (ngSubmit)="Reject()">
-    <button type="submit">Reject</button>
-</form> 
+<!-- <form (ngSubmit)="Reject()">
+    <button class="btn btn-outline-danger" type="submit">Reject</button>
+</form>  -->
 
 

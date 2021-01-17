@@ -16,24 +16,18 @@ export class AdminloginComponent implements OnInit {
 
   AdminCheck(){
     this.adminService.login(this.admin).subscribe(response=>{
-      console.log('abcd');
-      //console.log(response);
-      alert(JSON.stringify(response));
-
-
-      
-      //sessionStorage.setItem('AdminId',response.id);
-      this.router.navigate(['admin/dashboard']);
-      
-      //alert(response.Admin1);
-      
-      // sessionStorage.setItem('data',response.account);
-      //sessionStorage.setItem('accountNo',response.account.accountNo);
-      //sessionStorage.setItem('balance',response.account.balance);
-      //sessionStorage.setItem('custId',response.account.internetBanking.customerId);
-      //this.router.navigate(['login/dashboard']);
-      // this.router.navigate(['login/transfer']);
-    })
+      // alert(JSON.stringify(response));
+      if(response==null){
+        this.message="Incorrect email/password...!";
+      }
+      else{
+        sessionStorage.setItem('name',response.name);
+        sessionStorage.setItem('email',response.email);
+        sessionStorage.setItem('contact',response.contact);
+        sessionStorage.setItem('designation',response.designation);
+        this.router.navigate(['admin/dashboard']);
+      }
+    });
   }
 
 

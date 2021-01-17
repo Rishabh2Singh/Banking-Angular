@@ -1,12 +1,11 @@
-<p>internetbankingdetails works!</p>
-hey jude
-
-<form (ngSubmit)="showDetails()">
-    <button type="submit">View Details</button>
+<a routerLink='../' class="btn btn-outline-secondary">Back</a>
+<br>
+<form (ngSubmit)="showDetails()" class="text-center">
+    <button class="btn btn-outline-info" type="submit">View Details</button>
 </form>
-
+<br>
 <div>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Account No</th>
@@ -14,7 +13,7 @@ hey jude
                 <th>balance</th>
                 <th>Name</th>
                 <th>aadhar Card</th>
-                <th>Debit Card Number</th>
+                <th>Debit Card</th>
             </tr>
         </thead>
         <tbody>
@@ -31,10 +30,10 @@ hey jude
 </div>
 
 
-<form (ngSubmit)="ApproveInternetBanking()">
-    <button type="submit">Approve</button>
+<form class="text-center" (ngSubmit)="ApproveInternetBanking()">
+    <button class="btn btn-outline-success" type="submit">Approve</button>
 </form>
 
-<form (ngSubmit)="Reject1()">
-    <button type="submit">Reject</button>
-</form>
+<!-- <form (ngSubmit)="Reject1()">
+    <button class="btn btn-outline-danger" type="submit">Reject</button>
+</form> -->

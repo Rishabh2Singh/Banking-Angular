@@ -1,9 +1,15 @@
-<p>admin-dashboard works!</p>
+<a class='logout btn btn-danger' (click)='logoutAdmin()'>Logout</a>
+<div class="text-center">
+    <p class="text-muted">Welcome, {{adminName}} - {{adminEmail}}</p>
+</div>
+<br>
+<br>
+<div class="text-center">
 <form (ngSubmit)="FetchCustomerAccountData()">
-    <button type="submit">Account Opening Requests</button>
+    <button class="btn btn-outline-dark" type="submit">Account Opening Requests</button>
 
-<div>
-    <table mdbTable striped="true">
+<div class="col-sm-8">
+    <table class="table" mdbTable striped="true">
         <thead>
             <tr>
                 <th scope="col">Acc no.</th>
@@ -18,43 +24,20 @@
                 <td scope="col">{{data.accountHolderName}}</td>
                 <td scope="col">{{data.accountHolderId}}</td>
                 <td scope="col">
-                    <button  (click)="sendData(data.accountHolderId)">View Details</button>
+                    <button class="btn btn-link" (click)="sendData(data.accountHolderId)">View Details</button>
                    
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-
-<!--
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Customer Name</th>
-                    <th>Customer Address</th>
-                    <th>Email</th>
-                    <th>Aadhar</th>
-                    <th>Contact</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let data of customerdetails">
-                    <th>{{data.customerName}}</th>
-                    <td>{{data.customerAddress}}</td>
-                    <td>{{data.customerEmail}}</td>
-                    <td>{{data.customerAadharNumber}}</td>
-                    <td>{{data.customerMobileNumber}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>-->
+<br><br>
 </form>
 <form (ngSubmit)="FetchInternerBankingList()">
-    <button type="submit">Internet Banking Requests</button>
+    <button class="btn btn-outline-dark" type="submit">Internet Banking Requests</button>
 </form>
-<div>
-    <table>
+<div class="col-sm-8">
+    <table class="table">
         <thead>
             <tr>
                 <th>Acc holder name</th>
@@ -77,10 +60,11 @@
                 </td>
                 <td>
 
-                    <button  (click)="sendInternetData(data.accountNo)">View Details</button>
+                    <button class="btn btn-link" (click)="sendInternetData(data.accountNo)">View Details</button>
                    
                 </td>
             </tr>
         </tbody>
     </table>
+</div>
 </div>

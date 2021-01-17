@@ -17,12 +17,12 @@ export class AdminService {
     let url=("http://localhost:8080/customers");
     return this.http.get(url);  
   }
-  unapprovedCustomerList(a:Int16Array):Observable<any>{
+  unapprovedCustomerList(a:any):Observable<any>{
     console.log("service class reached for : "+a);
     let url=("http://localhost:8080/accountOpeningRequest");
     return this.http.post(url,a);
   }
-  updateCustomerStatus(a:Int16Array):Observable<any>{
+  updateCustomerStatus(a:any):Observable<any>{
     let url=("http://localhost:8080/approveCustomer");
     return this.http.post(url,a);
   }
@@ -30,11 +30,11 @@ export class AdminService {
     let url=("http://localhost:8080/internetBanking");
     return this.http.get(url);  
   }
-  internetBankingCustomerDetails(a:Int16Array):Observable<any>{
+  internetBankingCustomerDetails(a:number):Observable<any>{
     let url=("http://localhost:8080/internetBankingCustomerDetails");
     return this.http.post(url,a);  
   }
-  updateInternetBankingStatus(a:Int16Array):Observable<any>{
+  updateInternetBankingStatus(a:number):Observable<any>{
     console.log("function called for : "+a);
     let url=("http://localhost:8080/approveinternetbanking");
     return this.http.post(url,a);

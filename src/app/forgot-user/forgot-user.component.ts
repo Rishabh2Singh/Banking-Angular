@@ -51,7 +51,7 @@ export class ForgotUserComponent implements OnInit {
     else{
       if(this.otpSubmit==parseInt(this.otp)){
         // this.message="correct otp";
-        this.loginService.getCustomerId(1001345105).subscribe(response=>{ })
+        this.loginService.getCustomerId(parseInt(sessionStorage.getItem('acno'))).subscribe(response=>{ })
         alert("CustomerId is sent to your reistered email. Have a nice day!")
         this.messageSuccess="Done";
         sessionStorage.clear();

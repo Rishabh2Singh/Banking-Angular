@@ -19,24 +19,27 @@ export class UnapprovedcustomerComponent implements OnInit {
   cd:CustomerDetails[];
   temp:Int16Array;
   ab:string;
+  id:number;
   holderCheck(){
-
-    console.log("holder value fetched at unapproved customer : "+this.datatransfer.getnum());
-    temp:this.datatransfer.getnum();
-    console.log("temp: "+this.temp);
-    this.adminService.unapprovedCustomerList(this.datatransfer.getnum()).subscribe(response=>{
+    this.id=parseInt(sessionStorage.getItem('reqId'));
+    // console.log("holder value fetched at unapproved customer : "+this.datatransfer.getnum());
+    // temp:this.datatransfer.getnum();
+    // console.log("temp: "+this.temp);
+    this.adminService.unapprovedCustomerList(this.id).subscribe(response=>{
       this.cd=response;
       //console.log("Checking value in CD : " + this.cd.address);
-      alert(JSON.stringify(response));
+      // alert(JSON.stringify(response));
       
     })
 
   }
   Approve(){
-    this.adminService.updateCustomerStatus(this.datatransfer.getnum()).subscribe(response=>{
+    this.adminService.updateCustomerStatus(this.id).subscribe(response=>{
       //alert(JSON.stringify(response));
       alert("update successful");
+      sessionStorage.removeItem('reqId');
       this.router.navigate(['admin/dashboard']);
+
     })
 
   }
