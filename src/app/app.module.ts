@@ -36,6 +36,8 @@ import { from } from 'rxjs';
 import { ForgotUserComponent } from './forgot-user/forgot-user.component';
 import { ConfirmTransactionComponent } from './confirm-transaction/confirm-transaction.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { RemovePayeeComponent } from './remove-payee/remove-payee.component';
+import { ConfirmRemovePayeeComponent } from './confirm-remove-payee/confirm-remove-payee.component';
 
 
 
@@ -60,6 +62,8 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     ForgotUserComponent,
     ConfirmTransactionComponent,
     ForgotpasswordComponent,
+    RemovePayeeComponent,
+    ConfirmRemovePayeeComponent,
     
   ],
   imports: [

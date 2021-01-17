@@ -17,6 +17,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ForgotUserComponent } from './forgot-user/forgot-user.component';
 import { ConfirmTransactionComponent } from './confirm-transaction/confirm-transaction.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { RemovePayeeComponent } from './remove-payee/remove-payee.component';
+import { ConfirmRemovePayeeComponent } from './confirm-remove-payee/confirm-remove-payee.component';
 
 
 const routes: Routes = [
@@ -34,6 +36,8 @@ const routes: Routes = [
   {path: 'transfer', component:TransferComponent},
   {path: 'logout', component:LogoutComponent},
   {path: 'login/dashboard/fundTransfer/addPayee', component:AddPayeeComponent},
+  {path: 'login/dashboard/fundTransfer/removePayee', component:RemovePayeeComponent},
+  {path: 'confirmRemovePayee', component: ConfirmRemovePayeeComponent},
   {path: 'login/dashboard', component:LoginDashboardComponent,
     children: [
       {path: 'fundTransfer', component: FundTransferComponent},

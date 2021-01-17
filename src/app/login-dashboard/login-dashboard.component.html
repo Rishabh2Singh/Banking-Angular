@@ -1,11 +1,16 @@
 <a class='logout btn btn-danger' (click)='logoutUser()'>Logout</a>
 
 <div class="row text-center">
-    <div class="col-3">
-        <a routerLink='account-details' >Account Details</a><br>
-        <a routerLink='account-summary' >Account Summary</a><br>
-        <a routerLink='fundTransfer' >Funds Transfer</a><br>
-        <a routerLink='account-statement'>Account Statement</a><br>
+    <div class="col-3 bg-light">
+        <hr>
+        <a routerLink='account-details' class= "navbtn btn btn-light" >Account Details</a><br>
+        <hr>
+        <a routerLink='account-summary' class= "navbtn btn btn-light">Account Summary</a><br>
+        <hr>
+        <a routerLink='fundTransfer' class= "navbtn btn btn-light">Funds Transfer</a><br>
+        <hr>
+        <a routerLink='account-statement' class= "navbtn btn btn-light">Account Statement</a><br>
+        <hr>
     </div>
     <div class="col-8">
         <router-outlet></router-outlet>

@@ -1,0 +1,12 @@
+<a class="btn btn-secondary" routerLink='../'>Back</a>
+<form>
+    <h1 class="text-info text-center">Remove Payee</h1>
+    <br><br>
+    <hr>
+    <div class="form-group text-center" *ngFor="let x of benef">
+        <label class="col-sm-2">{{x[0]}}-{{x[1]}}</label>
+        <button class="btn btn-danger" type="submit" value={{x[0]}} (click)=onSubmit(x[0]) >Remove</button>
+        <hr>
+    </div>
+   
+</form>

@@ -9,6 +9,7 @@ import { AccountStatementServiceService } from '../account-statement-service.ser
 })
 export class AccountdetailsComponent implements OnInit {
 
+  val:string="true";
   accDet: AccountDet=new AccountDet();
   public cusId1:number=parseInt(sessionStorage.getItem('custId'));
   constructor(private accountStatementService:AccountStatementServiceService,private router:Router) { }

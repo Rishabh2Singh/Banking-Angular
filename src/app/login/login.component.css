@@ -4,7 +4,7 @@
     height: 350px;
     top: 30%;
     left: 47%;
-    margin: -80px 0 0 -190px;
+    margin: -50px 0 0 -190px;
     background-color: rgb(241, 241, 234);
     
     text-align: center;
@@ -14,10 +14,6 @@ form{
     margin: 20px;
     text-align: center;
 }
-/* strong{ */
-    /* margin-bottom: 5px; */
-    /* color: red;
-} */
 button{
     margin: 20px;
 }
