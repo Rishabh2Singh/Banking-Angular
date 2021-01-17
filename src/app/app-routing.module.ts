@@ -20,6 +20,10 @@ import { ConfirmTransactionComponent } from './confirm-transaction/confirm-trans
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { RemovePayeeComponent } from './remove-payee/remove-payee.component';
 import { ConfirmRemovePayeeComponent } from './confirm-remove-payee/confirm-remove-payee.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminDashboardComponent, InternetBankingDetails } from './admin-dashboard/admin-dashboard.component';
+import { UnapprovedcustomerComponent } from './unapprovedcustomer/unapprovedcustomer.component';
+import { InternetbankingdetailsComponent } from './internetbankingdetails/internetbankingdetails.component';
 
 
 const routes: Routes = [
@@ -52,7 +56,12 @@ const routes: Routes = [
   // {path : 'login/dashboard/account-details' , component : AccountdetailsComponent},
   {path : 'login/transactionDetail', component: TransactionReportComponent},
   {path : 'forgotId', component: ForgotUserComponent},
-  {path : 'transfer/confirmTransaction', component: ConfirmTransactionComponent}
+  {path : 'transfer/confirmTransaction', component: ConfirmTransactionComponent},
+  {path : 'admin', component: AdminloginComponent},
+  {path: 'admin/dashboard',component:AdminDashboardComponent},
+  {path:  'admin/dashboard/unapprovedcustomer',component:UnapprovedcustomerComponent},
+  {path : 'admin/dashboard/internetbankingdetails', component:InternetbankingdetailsComponent}
+  
 ];
 
 @NgModule({
