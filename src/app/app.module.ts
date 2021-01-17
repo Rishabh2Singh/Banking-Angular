@@ -34,6 +34,10 @@ import { ConfirmTransactionComponent } from './confirm-transaction/confirm-trans
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { RemovePayeeComponent } from './remove-payee/remove-payee.component';
 import { ConfirmRemovePayeeComponent } from './confirm-remove-payee/confirm-remove-payee.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UnapprovedcustomerComponent } from './unapprovedcustomer/unapprovedcustomer.component';
+import { InternetbankingdetailsComponent } from './internetbankingdetails/internetbankingdetails.component';
 
 
 
@@ -61,6 +65,10 @@ import { ConfirmRemovePayeeComponent } from './confirm-remove-payee/confirm-remo
     ForgotpasswordComponent,
     RemovePayeeComponent,
     ConfirmRemovePayeeComponent,
+    AdminloginComponent,
+    AdminDashboardComponent,
+    UnapprovedcustomerComponent,
+    InternetbankingdetailsComponent,
     
   ],
   imports: [

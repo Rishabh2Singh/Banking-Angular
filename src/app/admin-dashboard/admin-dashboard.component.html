@@ -1,0 +1,86 @@
+<p>admin-dashboard works!</p>
+<form (ngSubmit)="FetchCustomerAccountData()">
+    <button type="submit">Account Opening Requests</button>
+
+<div>
+    <table mdbTable striped="true">
+        <thead>
+            <tr>
+                <th scope="col">Acc no.</th>
+                <th scope="col">Holder Name</th>
+                <th scope="col">holderid</th>
+                <th scope="col">action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr mdbTableCol *ngFor="let data of customerAccountDetails">
+                <th scope="col">{{data.accountNo}}</th>
+                <td scope="col">{{data.accountHolderName}}</td>
+                <td scope="col">{{data.accountHolderId}}</td>
+                <td scope="col">
+                    <button  (click)="sendData(data.accountHolderId)">View Details</button>
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Customer Address</th>
+                    <th>Email</th>
+                    <th>Aadhar</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of customerdetails">
+                    <th>{{data.customerName}}</th>
+                    <td>{{data.customerAddress}}</td>
+                    <td>{{data.customerEmail}}</td>
+                    <td>{{data.customerAadharNumber}}</td>
+                    <td>{{data.customerMobileNumber}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>-->
+</form>
+<form (ngSubmit)="FetchInternerBankingList()">
+    <button type="submit">Internet Banking Requests</button>
+</form>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Acc holder name</th>
+                <th>Acc no</th>
+                <th>customerid</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of internetBankingDetails">
+                <th>{{data.accountHolderName}}</th>
+                <td>{{data.accountNo}}</td>
+                <td>
+
+                   {{data.customerId}}
+                    <!--<form #details="ngForm" (ngSubmit)="onsubmit(details.value)">
+                        <input type="hidden" name="holid" value={{data.accountHolderId}} [(ngModel)]="holid" >
+                        <button type="submit" >view details</button>
+                    </form>-->
+                </td>
+                <td>
+
+                    <button  (click)="sendInternetData(data.accountNo)">View Details</button>
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

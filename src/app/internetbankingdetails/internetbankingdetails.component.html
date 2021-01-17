@@ -1,0 +1,40 @@
+<p>internetbankingdetails works!</p>
+hey jude
+
+<form (ngSubmit)="showDetails()">
+    <button type="submit">View Details</button>
+</form>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Account No</th>
+                <th>Type</th>
+                <th>balance</th>
+                <th>Name</th>
+                <th>aadhar Card</th>
+                <th>Debit Card Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{this.internetBankingApprovalDetails.accountNo}}</td>
+                <td>{{this.internetBankingApprovalDetails.type}}</td>
+                <td>{{this.internetBankingApprovalDetails.balance}}</td>
+                <td>{{this.internetBankingApprovalDetails.name}}</td>
+                <td>{{this.internetBankingApprovalDetails.adharCard}}</td>
+                <td>{{this.internetBankingApprovalDetails.debitCard}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<form (ngSubmit)="ApproveInternetBanking()">
+    <button type="submit">Approve</button>
+</form>
+
+<form (ngSubmit)="Reject1()">
+    <button type="submit">Reject</button>
+</form>
