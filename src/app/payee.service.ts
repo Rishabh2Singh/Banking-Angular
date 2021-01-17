@@ -28,8 +28,8 @@ export class PayeeService {
   }
   addTransaction(transfer:Transaction){
     let url=("http://localhost:8080/transaction");
-    console.log(transfer);
-    alert(JSON.stringify(transfer));
+    // console.log(transfer);
+    // alert(JSON.stringify(transfer));
     return this.http.post(url,transfer);
   }
 }

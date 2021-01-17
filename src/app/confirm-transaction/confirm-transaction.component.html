@@ -1,0 +1,12 @@
+<div class="text-center">
+    <h1>Payment Confirmation</h1>
+    <br><br><br>
+    An Otp has been sent to your registered email id. Fill the otp below to confirm your transaction.
+    <br><br><br>
+    <form class="form-horizontal" (ngSubmit)="submitOtp()">
+        <div class="form-group">
+            <input type="text" class="control-label col-sm-6" [(ngModel)]="enteredOtp" name="enteredOtp" placeholder="Enter OTP...">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>

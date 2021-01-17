@@ -23,7 +23,21 @@ export class AccountStatementServiceService {
 
  updateDetails(accDet : AccountDet):Observable<any>{
     let url="http://localhost:8080/updateDetails";
-    console.log(accDet);
     return this.http.post<any>(url,accDet);
+  }
+
+  fetchAccountSummary(cusId:number):Observable<any>{
+    let url="http://localhost:8080/accountSummary?custId="+cusId;
+    return this.http.get<any>(url);
+  }
+
+  forgotPwd(cusId:number):Observable<any>{
+    let url="http://localhost:8080/forgotPassword?custId="+cusId;
+    return this.http.get<any>(url);
+  }
+
+  updatePassword(cusId:number,pwd:string):Observable<any>{
+    let url="http://localhost:8080/setNewPassword?custId="+cusId+"&pwd="+pwd;
+    return this.http.get<any>(url);
   }
 }

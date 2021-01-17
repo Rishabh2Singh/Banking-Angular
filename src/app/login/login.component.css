@@ -1,24 +1,32 @@
 .loginForm{
     position: absolute;
-    width: 400px;
-    height: 250px;
+    width: 450px;
+    height: 350px;
     top: 30%;
     left: 47%;
-    margin: -10px 0 0 -150px;
-    background-color: beige;
+    /* margin: -10px 0 0 -150px; */
+    /* background-color: beige; */
+    margin: -50px 0 0 -190px;
+    background-color: rgb(241, 241, 234);
     
     text-align: center;
 }
 form{
-    padding: 5px;
+    /* padding: 5px; */
     margin: 20px;
     text-align: center;
 }
-td{
+/* td{
     margin:5px;
     padding: 5px;
 }
 h1{
     font-family: Arial;
-    text-align: center;
+    text-align: center; */
+/* strong{ */
+    /* margin-bottom: 5px; */
+    /* color: red;
+} */
+button{
+    margin: 20px;
 }

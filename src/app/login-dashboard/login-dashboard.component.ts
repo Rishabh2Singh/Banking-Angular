@@ -9,10 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LoginDashboardComponent implements OnInit {
   constructor(private router:Router) { }
-
+  acno:number=parseInt(sessionStorage.getItem('accountNo'));
   ngOnInit(): void {
+    if(!this.acno){
+      this.router.navigate(['/logout']);
+    }
   }
-
+  logoutUser(){
+    sessionStorage.clear();
+    // sessionStorage.removeItem(this.acno);
+    // sessionStorage.removeItem(this.balance);
+    this.router.navigate(['/login']);
+  }
   goAccSumm(){
     this.router.navigate(['login/account-summary']);
   }

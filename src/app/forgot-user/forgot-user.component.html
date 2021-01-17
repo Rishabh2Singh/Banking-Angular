@@ -1,0 +1,18 @@
+<form (ngSubmit)="getOtp()">
+    <p class="text-center"> Enter your bank account number below. You will recieve an <mark>OTP at your email</mark> which is linked with your account. <br>
+    After entering the OTP you will recieve your Customer ID on your registered email id.
+    </p>
+    <div class="text-center">
+        <input type="text" class="accountNo" name="acno" [(ngModel)]=acno placeholder="Enter your account number">
+        <button type="submit" class="btn btn-secondary">Click here to Generate OTP</button>
+    </div>
+</form>
+<h6 class="text-center text-danger blink_me">{{message}}</h6>
+<form (ngSubmit)="checkOtp()">
+    <p class="text-center">After recieving the OTP on your email address, please fill it below and click on <mark>Submit OTP</mark></p>
+    <div class="text-center">
+        <input type="text" name="otpSubmit" [(ngModel)]=otpSubmit placeholder="Enter OTP here...">
+        <button class="btn btn-success">Submit OTP</button>
+    </div>
+</form>
+<h6 class="text-center text-success blink_me">{{messageSuccess}}</h6>

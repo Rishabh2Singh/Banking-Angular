@@ -21,18 +21,17 @@ import { AccountstatementComponent } from './accountstatement/accountstatement.c
 import { AccountsummaryComponent } from './accountsummary/accountsummary.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
-
-
+import { TransactionReportComponent } from './transaction-report/transaction-report.component';
 
 import { RegisterService } from './service/register.service';
 import { NetbankService } from './service/netbank.service';
 import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
 
-
-
-
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
+import { ForgotUserComponent } from './forgot-user/forgot-user.component';
+import { ConfirmTransactionComponent } from './confirm-transaction/confirm-transaction.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 
@@ -52,8 +51,12 @@ import { HomeComponent } from './home/home.component';
     AccountstatementComponent,
     AccountsummaryComponent,
     AccountdetailsComponent,
+    TransactionReportComponent,
     ConfirmEqualValidatorDirective,
     HomeComponent,
+    ForgotUserComponent,
+    ConfirmTransactionComponent,
+    ForgotpasswordComponent,
     
   ],
   imports: [

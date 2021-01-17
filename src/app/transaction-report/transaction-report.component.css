@@ -1,0 +1,29 @@
+
+.transForm{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-color: rgb(236, 231, 231); */
+    padding: 60px;
+    width: 450px;
+    color: black;
+    margin: auto;
+}
+td{
+    font-size: 18px;
+    padding: 3px;
+    padding-right: 25px;
+}
+.headTd{
+    padding: 3px;
+    font-size: 22px;
+    position: relative;
+    top: -25px;
+    left:20px;
+}
+
+.navigate{
+    padding-top: 35px;
+    text-align: center;
+}
+td:hover{
+    color: rgb(70, 143, 226);
+}

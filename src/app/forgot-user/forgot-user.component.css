@@ -1,5 +1,8 @@
-#transForm{
-    margin-left: 160px;
+.accountNo{
+    width: 400px;
+}
+form{
+    padding: 80px;
 }
 .blink_me{
     animation: blinker 0.7s linear infinite;

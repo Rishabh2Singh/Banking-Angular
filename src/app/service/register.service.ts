@@ -11,7 +11,7 @@ export class RegisterService {
   private registerUrl: string;
 
   constructor(private http: HttpClient) {
-    this.registerUrl = 'http://localhost:8086/newuser';
+    this.registerUrl = 'http://localhost:8080/newuser';
   }
 
   public save(register: Register) {

@@ -15,16 +15,18 @@ export class LoginComponent {
 
   loginCheck(){
     this.loginService.login(this.login).subscribe(response=>{
-      alert(JSON.stringify(response.message));
+      // alert(JSON.stringify(response.message));
       this.message=response.message;
-      alert(response.account)
+      // alert(response.account)
       console.log(response);
       // sessionStorage.setItem('data',response.account);
-      sessionStorage.setItem('accountNo',response.account.accountNo);
-      sessionStorage.setItem('balance',response.account.balance);
-      sessionStorage.setItem('custId',response.account.internetBanking.customerId);
-      this.router.navigate(['login/dashboard']);
+      if(this.message=="Login Successfully"){
+        sessionStorage.setItem('accountNo',response.account.accountNo);
+        sessionStorage.setItem('balance',response.account.balance);
+        sessionStorage.setItem('custId',response.account.internetBanking.customerId);
+        this.router.navigate(['login/dashboard']);
       // this.router.navigate(['login/transfer']);
+      }
     })
   }
 

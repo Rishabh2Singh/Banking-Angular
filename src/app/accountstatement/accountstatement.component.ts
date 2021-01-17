@@ -25,7 +25,7 @@ export class AccountstatementComponent implements OnInit {
   } 
 }
 export class AccountStatementCredentials {
- customerId  =1356786291;
+ customerId:number =parseInt(sessionStorage.getItem('custId'));
  fromDate:Date =new Date();
  toDate:Date =new Date();
 }
