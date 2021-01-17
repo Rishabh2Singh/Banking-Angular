@@ -13,21 +13,21 @@ export class PayeeService {
   constructor(private http:HttpClient) { }
 
   gettingBenef(custId:any):Observable<any>{
-    let url=(`http://localhost:8080/transfer?custId=${custId}`);
+    let url=(`http://localhost:8086/transfer?custId=${custId}`);
     // alert(custId);
     return this.http.get(url);
   }
   addingPayee(payee:Payee): Observable<any>{
     // alert(payee.custId);
-    let url=("http://localhost:8080/add");
+    let url=("http://localhost:8086/add");
     return this.http.post(url,payee);
   }
   getMyAcc(custId: number):Observable<any> {
-    let url=(`http://localhost:8080/getAcc?custId=${custId}`);
+    let url=(`http://localhost:8086/getAcc?custId=${custId}`);
     return this.http.get(url);
   }
   addTransaction(transfer:Transaction){
-    let url=("http://localhost:8080/transaction");
+    let url=("http://localhost:8086/transaction");
     // console.log(transfer);
     // alert(JSON.stringify(transfer));
     return this.http.post(url,transfer);

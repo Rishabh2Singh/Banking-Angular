@@ -10,7 +10,7 @@ export class NetbankService {
   private netbankUrl: string;
 
   constructor(private http: HttpClient) {
-    this.netbankUrl = 'http://localhost:8080/netbanking';
+    this.netbankUrl = 'http://localhost:8086/netbanking';
   }
 
   public save(netbank: Netbank) {
