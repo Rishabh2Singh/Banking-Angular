@@ -85,7 +85,7 @@ export class TransferComponent implements OnInit {
     
     this.loginService.getOtp(this.fromAcc).subscribe(response=>{
       this.otp=response;
-      alert(this.otp);
+      // alert(this.otp);
       sessionStorage.setItem('otp',this.otp);
       this.router.navigate(['transfer/confirmTransaction']);
     });

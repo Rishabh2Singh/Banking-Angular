@@ -26,7 +26,7 @@ export class ForgotUserComponent implements OnInit {
     }
     else{
     this.loginService.getOtp(this.acno).subscribe(response=>{
-      alert(response);
+      // alert(response);
       this.otp=response;
       // sessionStorage.setItem('otp',response);
       if(parseInt(this.otp)==1){
@@ -37,6 +37,7 @@ export class ForgotUserComponent implements OnInit {
       }
       else{
         sessionStorage.setItem('acno',this.acno);
+        this.message="";
         this.messageSuccess="Otp has been sent";
       }
     });

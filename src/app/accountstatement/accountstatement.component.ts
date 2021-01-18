@@ -1,6 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountStatementServiceService } from '../account-statement-service.service';
+import jsPDF from 'jspdf'; 
+import 'jspdf-autotable';
+
 // import * as jsPDF from 'jspdf'
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 // import html2canvas from 'html2canvas'
@@ -31,6 +34,22 @@ export class AccountstatementComponent implements OnInit {
         this.stmt=response;
   });
   } 
+  downloadPdf(){
+    const doc = new jsPDF();
+    let rows = [];
+    let columns = [
+      {title: "Date", dataKey: "date"},
+      {title: "Time", dataKey: "time"},
+      {title: "Name", dataKey: "name"},
+      {title: "Account Number", dataKey: "accountNo"},
+      {title: "Amount", dataKey: "amount"},
+      {title: "type", dataKey: "type"}
+    ];
+    rows= this.stmt.resDto;
+    doc.text("Transactions", 10, 10);
+    doc.autoTable(columns, rows);
+    doc.save('AccountStatement.pdf');
+  }
 }
 export class AccountStatementCredentials {
  customerId:number =parseInt(sessionStorage.getItem('custId'));

@@ -26,12 +26,22 @@ export class ForgotpasswordComponent implements OnInit {
         alert(JSON.stringify(response.statusMsg));
       });
   }
+  message:string;
   validateCustId() {
     console.log(this.customerId);
-    this.accountStatementService.forgotPwd(this.customerId).subscribe(
-      (response: any) => {
-        alert(JSON.stringify(response.statusMsg));
-      });
+    if(!this.customerId){
+      this.message="Please enter the customer id";
+    }else{
+      this.accountStatementService.forgotPwd(this.customerId).subscribe(
+        (response: any) => {
+          // if(response.statusMsg=="No User Found!!! Please check ur CustomerId"){
+          //   this.message="No User Found!!! Please check ur CustomerId";
+          // }
+          // else{
+            alert(JSON.stringify(response.statusMsg));
+          // }
+        });
+      }
   }
 
 }

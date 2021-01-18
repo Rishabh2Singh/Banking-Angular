@@ -7,10 +7,13 @@
             Statement from :<input type="date" name="fromDate" [(ngModel)]=accountStatementCredentials.fromDate
                 class="from-class">
             to:<input type="date" name="toDate" [(ngModel)]=accountStatementCredentials.toDate> <br>
-            <button type="submit" class="submit-class">Submit</button>
+            <br>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <br><br>
         </form>
     </div>
     <h3 align="center"> {{stmt.message}}</h3>
+    <div class="table-wrapper">
     <table class="table table-trapped" align="center">
             <tr>
                 <th>Date</th>
@@ -29,4 +32,8 @@
                 <td> {{stm.type}}</td>
             </tr>
     </table>
+</div>
+    <button (click)="downloadPdf()" class="btn btn-info">
+        Download
+      </button>
 </div>

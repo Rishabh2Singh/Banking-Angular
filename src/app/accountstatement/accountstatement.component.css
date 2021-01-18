@@ -10,3 +10,7 @@
 .from-class{
     margin-right: 2%;
 }
+.table-wrapper{
+    overflow: auto;
+    height: 300px;
+}

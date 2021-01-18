@@ -23,4 +23,7 @@ export class ConfirmRemovePayeeComponent implements OnInit {
     this.payeeService.removePayee(this.acno,this.custId).subscribe(response=>{})
       this.router.navigate(['../login/dashboard/fundTransfer/removePayee'])
   }
+  onDecline(){
+    this.router.navigate(['../login/dashboard/fundTransfer/removePayee']);
+  }
 }
